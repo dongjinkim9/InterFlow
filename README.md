@@ -75,8 +75,9 @@ conda activate interflow
 ### InterFlow
 | GT    | RealSR $\times2$ | RealSR $\times4$ | InterFlow ($\times2$ ~ $\times4$)|
 | :---: | :---:         | :---:            | :---:            |
-| ![HR_037]() | ![LR2_037]() | ![LR4_037]() | ![IF_037]() |
-| ![HR_171]() | ![LR2_171]() | ![LR4_171]() | ![IF_171]() |
+| ![HR_037](https://github.com/dongjinkim9/InterFlow/assets/48521269/fb0a52f9-85ac-463b-8594-c9b13fd80954) | ![LR2_037](https://github.com/dongjinkim9/InterFlow/assets/48521269/89ba0141-c55e-4fa2-a67a-cd2a3710ffbc) | ![LR4_037](https://github.com/dongjinkim9/InterFlow/assets/48521269/e02f819d-2cbc-4a5f-a849-0ccc36beaddc) | ![IF_037](https://github.com/dongjinkim9/InterFlow/assets/48521269/4be19603-79a3-4415-bf20-d0b016eb16e1) |
+| ![HR_171](https://github.com/dongjinkim9/InterFlow/assets/48521269/6e05881e-1413-409e-8ec1-2c120865ae6c) | ![LR2_171](https://github.com/dongjinkim9/InterFlow/assets/48521269/db06262f-5440-4f16-99b7-5e923e125a7e) | ![LR4_171](https://github.com/dongjinkim9/InterFlow/assets/48521269/720dc4ed-b5c6-4803-b914-631175c288ea) | ![IF_171](https://github.com/dongjinkim9/InterFlow/assets/48521269/17c50627-7bf4-49e9-81cf-916731405da5) |
+
 
 ### SR networks with InterFlow 
 ![interflow](assets/results.png)
