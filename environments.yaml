@@ -1,0 +1,25 @@
+name: interflow
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - cudatoolkit=11.6
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - pip:
+    - scikit-image
+    - scipy
+    - einops 
+    - Pillow
+    - opencv-python
+    - lpips
+    - timm
+    - matplotlib
+    - wandb
+    - natsort
+    - tensorboard
+    - gdown
