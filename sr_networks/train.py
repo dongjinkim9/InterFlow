@@ -95,6 +95,8 @@ def train(args):
               'args' : args,}
     with open(os.path.join(args.parameter_save_path, "config.json"), "w") as json_file:
         json.dump(config, json_file, cls=MyEncoder)
+    
+    save_path = None
 
     with tqdm(enumerate(loader)) as pbar:
         for step, train_data in pbar:
@@ -111,7 +113,7 @@ def train(args):
 
             pbar.set_postfix(loss=loss.item(), lr=optimizer.param_groups[0]['lr'])
 
-            if (step+1) % args.parameter_save_iter == 0 and args.parameter_save_path is not None:
+            if (step+1) % args.checkpoint_step == 0 and args.parameter_save_path is not None:
                 save_path = os.path.join(args.parameter_save_path, f'iter{step+1}_{args.parameter_name}')
                 torch.save(model.state_dict(), save_path)
             if (step+1) % args.validation_step == 0:
@@ -144,8 +146,9 @@ def train(args):
                 writer.add_scalar('train/loss', loss.item(), step)
                 writer.add_scalar('train/learning_rate', optimizer.param_groups[0]['lr'], step)
     
-    artifact.add_file(save_path)
-    wandb.log_artifact(artifact)
+    if save_path:
+        artifact.add_file(save_path)
+        wandb.log_artifact(artifact)
 
 @torch.inference_mode()
 def validation(args, device, model, train_iter=None):

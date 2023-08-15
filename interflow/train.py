@@ -61,10 +61,10 @@ def train(args):
     print('\n[*] args: {}\n'.format(args))
 
     nan_count, skip_count = 0, 0
+    save_path = None
 
     with tqdm(enumerate(loader)) as pbar:
         for step, train_data in pbar:
-            step += 1
             gt = train_data['GT'].to(device)
             low_res = train_data['LR'].to(device)
             degradation_scale = train_data['scale'].to(device)
@@ -133,7 +133,7 @@ def train(args):
             pbar.set_postfix(nll=nll_loss.item(), consistency_loss=consistency_loss.item(),
                              ib_loss=ib_loss.item() ,lr=optimizer.param_groups[0]['lr'])
             
-            if step % 500 == 0:                  
+            if (step+1) % 500 == 0:                  
                 wandb.log({'train/nll': nll_loss.item(),
                         'train/consistency_loss': consistency_loss.item(),
                         'train/ib_loss': ib_loss.item(),
@@ -147,12 +147,13 @@ def train(args):
                 writer.add_scalar('total_loss', loss.item(), step)
                 writer.add_scalar('learning_rate', optimizer.param_groups[0]['lr'], step)
 
-            if step % 10000 == 0 and args.parameter_save_path is not None:
+            if (step+1) % args.checkpoint_step == 0 and args.parameter_save_path is not None:
                 save_path = os.path.join(args.parameter_save_path, 'last_{}'.format(args.parameter_name))
                 torch.save(model.state_dict(), save_path)
-
-    artifact.add_file(save_path)
-    wandb.log_artifact(artifact)
+    
+    if save_path:
+        artifact.add_file(save_path)
+        wandb.log_artifact(artifact)
 
 
 def test(args):

@@ -17,11 +17,11 @@ if __name__ == "__main__":
     parser.add_argument('--learning-rate', type=float, default=1e-4)
     parser.add_argument('--train-iteration', type=int)
     parser.add_argument('--validation-step', type=int, default=10000)
+    parser.add_argument('--checkpoint-step', type=int, default=10000)
     parser.add_argument('--test-scale', type=float, default=3.)
     parser.add_argument('--patch-size', type=int, default=128)
     parser.add_argument('--test', action='store_true', default=False)
     parser.add_argument('--gpu', type=str, default='0')
-    parser.add_argument('--parameter-save-iter', type=int, default=10000)
     parser.add_argument('--model', type=str, choices=["VDSR", "RCAN", "KPN", "MetaSR","HAN", "NLSN", "LIIF", "SwinIR"], 
                         help='type one of "VDSR" "RCAN" "KPN" "MetaSR" "HAN" "NLSN" "LIIF" "SwinIR"')
     parser.add_argument('--preload', action='store_true', default=False)

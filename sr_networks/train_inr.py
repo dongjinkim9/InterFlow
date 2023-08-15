@@ -149,10 +149,11 @@ def train(args):
                 writer.add_scalar('train/loss', loss.item(), step)
                 writer.add_scalar('train/learning_rate', optimizer.param_groups[0]['lr'], step)
     
-            if (step+1) % args.parameter_save_iter == 0 and args.parameter_save_path is not None:
+            if (step+1) % args.checkpoint_step == 0 and args.parameter_save_path is not None:
                 save_path = os.path.join(args.parameter_save_path, f'iter{step+1}_{args.parameter_name}')
                 torch.save(model.state_dict(), save_path)
         
+    if save_path:
         artifact.add_file(save_path)
         wandb.log_artifact(artifact)
 
