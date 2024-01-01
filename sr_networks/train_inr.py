@@ -48,7 +48,7 @@ def train(args):
     transform = [augmentation()]
 
 
-    with open('./configs/arb_train_configs.json', "r") as confs:
+    with open('configs/arb_train_configs.json', "r") as confs:
         train_setting = json.load(confs)
     setting = train_setting[args.parameter_name]
     print(setting)

@@ -176,12 +176,12 @@ def validate_interp(args, device, model, test_scale, save_image=False, verbose=F
     loader = DataLoader(dataset, num_workers=1)
     if(save_image and not os.path.exists('output_images')): os.makedirs('output_images')
 
-    save_dir = './output_images/interflow/scale_{:.1f}'.format(test_scale)
+    save_dir = 'output_images/interflow/scale_{:.1f}'.format(test_scale)
 
     if not os.path.exists(save_dir): 
         os.makedirs(save_dir)
     if not os.path.exists('output_images/original'): 
-        os.makedirs('./output_images/original')
+        os.makedirs('output_images/original')
     model.eval()
 
     target_scale = test_scale

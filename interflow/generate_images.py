@@ -113,7 +113,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--foldername', type=str)
     parser.add_argument('--parameter', type=str)
-    parser.add_argument('--dataset-dir', type=str, default='./datasets/RealSR_v2_ordered/Nikon/Train_divided')
+    parser.add_argument('--dataset-dir', type=str, default='datasets/RealSR_v2_ordered/Nikon/Train_divided')
     parser.add_argument('--save-dir', type=str, default='output_images')
     parser.add_argument("--model-scales", type=int, nargs="+")
     parser.add_argument("--target-scales", type=int, nargs="+")

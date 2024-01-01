@@ -26,14 +26,14 @@ Please refer more examples in ``scripts/train.sh``
 
 ## Evaluation
 
-1. Download the pre-trained [model](https://hyu-my.sharepoint.com/:u:/g/personal/dongjinkim_hanyang_ac_kr/EbQdObqo_pNBoyfMjs10smcBakm9mbdMtFiviemceAaCdA?e=9dgaZ6&download=1) and place it in `./pretrained_models/` manually
+1. Download the pre-trained [model](https://onedrive.live.com/download?resid=85CF5B7F538E2007%2122525&authkey=!APKEwR_eJ8CLIsk) and place it in `./pretrained_models/` manually
 
 OR run:
 ```
 python download.py --file pretrained
 ```
 
-2. To download RealSR x3 test datasets[[link](https://hyu-my.sharepoint.com/:u:/g/personal/dongjinkim_hanyang_ac_kr/EYF4Xt2V-rFEoLzbaUq6LVABByEe-Yc55-xFhIPhHkfK6A?e=LQc5Nq&download=1)], run 
+2. To download RealSR x3 test datasets[[link](https://onedrive.live.com/download?resid=85CF5B7F538E2007%2143412&authkey=!APs3vr1pAFK7HGo)], run 
 ```
 python download.py --file RealSR_234
 ```

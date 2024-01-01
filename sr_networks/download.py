@@ -13,15 +13,16 @@ if __name__ == "__main__":
 
     if args.file == "RealSR_234":
         print('downloading dataset...')
-        os.system('wget --no-check-certificate "https://hyu-my.sharepoint.com/:u:/g/personal/dongjinkim_hanyang_ac_kr/EYF4Xt2V-rFEoLzbaUq6LVABByEe-Yc55-xFhIPhHkfK6A?e=LQc5Nq&download=1" -O RealSR_v2_ordered.tar')
+        os.system('wget --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/121.0" "https://onedrive.live.com/download?resid=85CF5B7F538E2007%2143412&authkey=!APs3vr1pAFK7HGo" -O RealSR_v2_ordered.tar')
         print('Extracting Data...')
         shutil.unpack_archive('RealSR_v2_ordered.tar', 'datasets/.')
         os.remove('RealSR_v2_ordered.tar')
     elif args.file == "RealSR_24_gen":
         print('downloading generated dataset from InterFlow...')
-        os.system('wget --no-check-certificate "https://hyu-my.sharepoint.com/:u:/g/personal/dongjinkim_hanyang_ac_kr/EUey1T5fIvNEoh4qYX2eG2oB479zIHWEaNCLNTHkhX6dbA?e=sTY93D&download=1" -O interflow_2_4_images.tar')
+        os.system('wget --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/121.0" "https://onedrive.live.com/download?resid=85cf5b7f538e2007%2140332&authkey=!AEJDOr0suzDFk_o" -O interflow_2_4_images.tar')
         print('Extracting Data...')
         shutil.unpack_archive('interflow_2_4_images.tar', 'datasets/.')
+        os.system('mv datasets/trainable_m1v_flow_scale24_final4 datasets/interflow_2_4_images')
         os.remove('interflow_2_4_images.tar')
     elif args.file == "DRealSR_3_test":
         print('downloading DRealSR x3 test...')
@@ -33,7 +34,7 @@ if __name__ == "__main__":
         os.remove('DRealsr_x3_test.zip')
     elif args.file == "pretrained":
         print('downloading pretrained sr_networks...')
-        os.system('wget --no-check-certificate "https://hyu-my.sharepoint.com/:u:/g/personal/dongjinkim_hanyang_ac_kr/EbQdObqo_pNBoyfMjs10smcBakm9mbdMtFiviemceAaCdA?e=9dgaZ6&download=1" -O sr_networks.tar')
+        os.system('wget --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/121.0" "https://onedrive.live.com/download?resid=85CF5B7F538E2007%2122525&authkey=!APKEwR_eJ8CLIsk" -O sr_networks.tar')
         print('Extracting Data...')
         shutil.unpack_archive('sr_networks.tar', 'pretrained_models/.')
         os.remove('sr_networks.tar')

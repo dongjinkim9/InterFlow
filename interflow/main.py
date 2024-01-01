@@ -5,8 +5,8 @@ os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 
 if __name__ == "__main__":  
     parser = argparse.ArgumentParser()
-    parser.add_argument('--GT-path', type=str, default='./datasets/RealSR_v2_ordered/Canon/Train_divided')
-    parser.add_argument('--test-GT-path', type=str, default='./datasets/RealSR_v2_ordered/Nikon/Train_divided')
+    parser.add_argument('--GT-path', type=str, default='datasets/RealSR_v2_ordered/Canon/Train_divided')
+    parser.add_argument('--test-GT-path', type=str, default='datasets/RealSR_v2_ordered/Nikon/Train_divided')
     parser.add_argument('--parameter-save-path', type=str, default='parameters/')
     parser.add_argument('--parameter-restore-path', type=str, default=None)
     parser.add_argument('--rrdb-restore-path', type=str, default=None)
