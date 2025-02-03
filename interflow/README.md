@@ -1,9 +1,6 @@
 ## Training
 
-1. Download restructured RealSR version 2 dataset for training and generation:
-```
-python download_dataset.py
-```
+1. Download restructured RealSR version 2 [dataset](https://1drv.ms/u/c/85cf5b7f538e2007/EQcgjlN_W88ggIWUqQAAAAABQOgqVHg0X7B5NY_u1pD9RA?e=TgwDe2) and place it in `datasets/`
 
 2. To train Interflow with default settings, run
 ```
@@ -15,7 +12,7 @@ python main.py \
 
 ## Generation
 
-1. Download the pre-trained [model](https://onedrive.live.com/download?resid=85CF5B7F538E2007%2123852&authkey=!AIrAVFRUcCHoYoM) and place it in `./pretrained_models/`
+1. Download the pre-trained [model](https://1drv.ms/f/c/85cf5b7f538e2007/EgcgjlN_W88ggIUpRwAAAAABzaBTD730v-ZpO7K8EvABCw?e=ONG0vW) and place it in `pretrained_models/`
 
 2. Generate the images with intermediate degradation levels $\times2$ ~ $\times4$:
 ```

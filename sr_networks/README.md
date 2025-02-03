@@ -1,14 +1,9 @@
 
 ## Training
-1. Download restructured RealSR version 2 for training:
-```
-python download.py --file RealSR_234
-```
+1. Download restructured RealSR version 2 [dataset](https://1drv.ms/u/c/85cf5b7f538e2007/EQcgjlN_W88ggIWUqQAAAAABQOgqVHg0X7B5NY_u1pD9RA?e=TgwDe2) and place it in `./datasets/`
 
-2. (Optional) To download generated dataset with intermidiate levels from Interflow:
-```
-python download.py --file RealSR_24_gen
-```
+2. (Optional) Download synthesized [dataset](https://1drv.ms/u/c/85cf5b7f538e2007/EQcgjlN_W88ggIWMnQAAAAAB9BH0d1sfTQn3BUxxGwXfig?e=xG3e9r) from Interflow with intermidiate degradation levels
+ and place it in `./datasets/`
 
 3. To train SR networks, run
 ```
@@ -26,23 +21,11 @@ Please refer more examples in ``scripts/train.sh``
 
 ## Evaluation
 
-1. Download the pre-trained [model](https://onedrive.live.com/download?resid=85CF5B7F538E2007%2122525&authkey=!APKEwR_eJ8CLIsk) and place it in `./pretrained_models/` manually
+1. Download the pre-trained [model](https://1drv.ms/f/c/85cf5b7f538e2007/EgcgjlN_W88ggIUoRwAAAAABX3143bYhvER4tW9Rk9GZAg) and place it in `./pretrained_models/` manually
 
-OR run:
-```
-python download.py --file pretrained
-```
 
-2. To download RealSR x3 test datasets[[link](https://onedrive.live.com/download?resid=85CF5B7F538E2007%2143412&authkey=!APs3vr1pAFK7HGo)], run 
-```
-python download.py --file RealSR_234
-```
-
-3. To download DRealSR x3 test datasets [[offical link](https://drive.google.com/drive/folders/16B4ssDaDAsH-kE7LQXY5JOxijq5abqhf)], run 
-```
-python download.py --file DRealSR_3_test
-```
-
+2. Download test datasets : [RealSR x3](https://1drv.ms/u/c/85cf5b7f538e2007/EQcgjlN_W88ggIWUqQAAAAABQOgqVHg0X7B5NY_u1pD9RA?e=TgwDe2), 
+                            [DRealSR x3](https://drive.google.com/drive/folders/16B4ssDaDAsH-kE7LQXY5JOxijq5abqhf)
 
 4. Testing
 ```
